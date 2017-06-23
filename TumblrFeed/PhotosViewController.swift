@@ -128,8 +128,8 @@ let vc = segue.destination as! PhotoDetailViewController
         task.resume()
         }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //return posts.count
-        return 1
+        return posts.count
+       
     }
     /*func numberOfSections(in tableView: UITableView) -> Int {
         return posts.count
@@ -137,7 +137,7 @@ let vc = segue.destination as! PhotoDetailViewController
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoTableViewCell", for: indexPath) as! PhotoTableViewCell
-        let post = posts[indexPath.section]
+        let post = posts[indexPath.row]
         if let photos = post["photos"] as? [[String:Any]]
         {
             let photo = photos[0]
